@@ -24,7 +24,61 @@ h1{
 }
 
 /*Обертка элемента с мемом*/
+.wrapper{
 
+    max-width: 60vw;
+    padding: 2em;
+    background-color: rgb(200, 231, 88);
+    border-radius: 5%;
+    box-shadow: 30px 30px 41px 0px #B0B0B7;
+}
 
+.accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .accordion-item {
+    padding-bottom: 0.5em;
+    border-bottom: 1px dotted grey;
+  }
+
+  .accordion-header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0.5em;
+    cursor: pointer;
+  }
+
+  .accordion-header::after {
+    content: '+';
+    font-size: 24px;
+    font-weight: bold;
+    transform: rotate(0);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  
+.accordion-header.active::after {
+    transform: rotate(45deg);
+  }
+  
+  .accordion-content {
+    display: none;
+    padding: 1rem;
+  }
+  
+  .accordion-content.active {
+    display: block;
+  }
+
+  /*Блок контента мемов*/
+
+  .meme1{
+    height: 2em;
+    width: 2em;
+    background: url(../assets/maury-meme.jpg) center no-repeat;
+  }
 
 
