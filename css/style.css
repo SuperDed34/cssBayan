@@ -36,10 +36,11 @@ h1{
 .accordion {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    padding-bottom: 1rem;
   }
 
   .accordion-item {
+    min-height: 2rem;
     padding-bottom: 0.5em;
     border-bottom: 1px dotted grey;
   }
@@ -65,12 +66,22 @@ h1{
   }
   
   .accordion-content {
-    display: block;
-    padding: 1rem;
+  
+    max-height: 0em;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
   }
   
-  .accordion-content.active {
-    display: block;
+  .accordion-item:active > .accordion-content {
+    transition: max-height 0.3s ease-in-out;
+    max-height: 20rem;
+   
+  }
+
+  .accordion-item:hover > .accordion-content {
+    transition: max-height 0.3s ease-in-out;
+    max-height: 20rem;
+   
   }
 
   /*Блок контента мемов*/
@@ -81,5 +92,27 @@ h1{
     background: url(../assets/mem1.png) center no-repeat;
     background-size: cover;
   }
+
+  .meme2{
+    height: 20em;
+    width: 20em;
+    background: url(../assets/mem2.png) center no-repeat;
+    background-size: cover;
+  }
+
+  .meme3{
+    height: 20em;
+    width: 20em;
+    background: url(../assets/mem3.png) center no-repeat;
+    background-size: cover;
+  }
+
+  .meme4{
+    height: 20em;
+    width: 20em;
+    background: url(../assets/mem4.png) center no-repeat;
+    background-size: cover;
+  }
+
 
 
