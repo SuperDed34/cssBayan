@@ -71,19 +71,25 @@ h1{
     overflow: hidden;
     transition: max-height 0.3s ease-in-out;
   }
-  
-  .accordion-item:active > .accordion-content {
+  /*Реалиация нажатия и тачпада*/
+  .accordion:active .accordion-content {
     transition: max-height 0.3s ease-in-out;
     max-height: 20rem;
    
   }
-
-  .accordion-item:hover > .accordion-content {
+ /*Реалиация наведения мыши*/
+  .accordion:hover .accordion-content {
     transition: max-height 0.3s ease-in-out;
     max-height: 20rem;
-   
   }
-
+ /*Реалиация нажатия и тачпада*/
+ input[type="radio"]{
+  appearance: none;
+ }
+  input[type="radio"]:checked  + .accordion-content{
+    transition: max-height 0.3s ease-in-out;
+    max-height: 20rem;
+  }
   /*Блок контента мемов*/
 
   .meme1{
