@@ -28,7 +28,7 @@ h1{
 
     max-width: 60vw;
     padding: 2em;
-    background-color: rgb(200, 231, 88);
+    background-color: rgb(239, 243, 43);
     border-radius: 5%;
     box-shadow: 30px 30px 41px 0px #B0B0B7;
 }
@@ -65,7 +65,7 @@ h1{
   }
   
   .accordion-content {
-    display: none;
+    display: block;
     padding: 1rem;
   }
   
@@ -76,9 +76,10 @@ h1{
   /*Блок контента мемов*/
 
   .meme1{
-    height: 2em;
-    width: 2em;
-    background: url(../assets/maury-meme.jpg) center no-repeat;
+    height: 20em;
+    width: 20em;
+    background: url(../assets/mem1.png) center no-repeat;
+    background-size: cover;
   }
 
 
