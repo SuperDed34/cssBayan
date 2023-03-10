@@ -36,7 +36,7 @@ h1{
     box-shadow: 30px 30px 41px 0px #B0B0B7;
     overflow: hidden;
 }
-
+/* стилизация блоков с мемами*/
 .accordion {
     display: flex;
     flex-direction: column;
@@ -44,6 +44,7 @@ h1{
   }
 
   .accordion-item {
+    display: flex;
     min-height: 2rem;
     padding-bottom: 0.5em;
     border-bottom: 1px dotted grey;
@@ -56,16 +57,27 @@ h1{
     cursor: pointer;
   }
   
-.accordion-header.active::after {
-    transform: rotate(45deg);
-  }
-  
   .accordion-content {
-  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 50vw;  
     max-height: 0em;
     overflow: hidden;
     transition: max-height 0.3s ease-in-out;
   }
+
+/*Крестик вместо афтер*/
+  .xcross{
+    display: none;
+    height: 1rem;
+    width: 1rem;
+    background: url(../assets/xmark.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+  }
+  
   /*Реалиация нажатия и тачпада*/
   .accordion:active .accordion-content {
     transition: max-height 0.3s ease-in-out;
@@ -79,11 +91,11 @@ h1{
     max-height: 15rem;
     }
 
-  .wrapper:hover .accordion-header::after {
-    content: '+';
+  .wrapper:hover .xcross {
+    display: block;
     font-size: 1rem;
     font-weight: bold;
-    transform: rotate(0);
+    transform: rotate(45deg);
     transition: transform 0.3s ease-in-out;
   }
 
@@ -91,8 +103,8 @@ h1{
     color: rgb(61, 83, 83);
   }
 
-  .accordion:hover .accordion-header::after{
-    transform: rotate(45deg);
+  .accordion:hover .xcross{
+    transform: rotate(0deg);
   }
 
  /*Реалиация выбора одного пунтка без JS*/
@@ -100,16 +112,14 @@ h1{
   appearance: none;
  }
 
-  input[type="radio"]:checked  + .accordion-content{
+  input[type="radio"]:checked  ~ .accordion-content{
     transition: max-height 0.3s ease-in-out;
     max-height: 20rem;
   }
 
-input[type="radio"]:checked .accordion-header::after{
-  content: '+';
-  font-size: 1.8rem;
-  font-weight: bold;
-  transform: rotate(45deg);
+  input[type="radio"]:checked + .accordion-header .xcross{
+  display: block;
+  transform: rotate(0);
   transition: transform 0.3s ease-in-out;
 }
   /*Блок контента мемов*/
