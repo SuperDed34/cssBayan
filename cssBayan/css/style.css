@@ -216,26 +216,28 @@ h1{
     max-width: 80vw;
   }
 
-   /*Реалиация наведения мыши только в PC версии*/
-   .accordion:hover .accordion-content {
-    transition: max-height 0.3s ease-in-out;
-    max-height: 20em;
+}
+
+@media(hover:hover) {
+     /*Реалиация наведения мыши только в PC версии*/
+     .accordion:hover .accordion-content {
+      transition: max-height 0.3s ease-in-out;
+      max-height: 20em;
+      }
+  
+    .wrapper:hover .xcross {
+      display: block;
+      font-size: 1em;
+      font-weight: bold;
+      transform: rotate(45deg);
+      transition: transform 0.3s ease-in-out;
     }
-
-  .wrapper:hover .xcross {
-    display: block;
-    font-size: 1em;
-    font-weight: bold;
-    transform: rotate(45deg);
-    transition: transform 0.3s ease-in-out;
-  }
-  .wrapper:hover .accordion-header{
-    color: red;
-  }
-
-  .accordion:hover .xcross{
-    transform: rotate(0deg);
-  }
-
+    .wrapper:hover .accordion-header{
+      color: red;
+    }
+  
+    .accordion:hover .xcross{
+      transform: rotate(0deg);
+    }
 }
 
