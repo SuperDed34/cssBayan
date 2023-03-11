@@ -90,6 +90,11 @@ h1{
    
   }
 
+  /*Сохранение цвета при клике*/
+  .accordion:active h2{
+    color: black !important;
+  }
+  
 
  /*Реалиация выбора одного пунтка без JS*/
  input[type="radio"]{
@@ -106,6 +111,9 @@ h1{
   transform: rotate(0);
   transition: transform 0.3s ease-in-out;
 }
+  input[type="radio"]:checked + .accordion-header h2{
+    color: red;
+  }
   /*Блок контента мемов*/
 
   .meme1{
@@ -221,15 +229,13 @@ h1{
     transform: rotate(45deg);
     transition: transform 0.3s ease-in-out;
   }
-
   .wrapper:hover .accordion-header{
-    color: rgb(61, 83, 83);
+    color: red;
   }
 
   .accordion:hover .xcross{
     transform: rotate(0deg);
   }
-
 
 }
 
